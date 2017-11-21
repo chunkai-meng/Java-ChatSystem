@@ -1,8 +1,22 @@
+---
+title: Java Network Programming - ChatSystem
+date: 2017-11-20 17:43:58
+categories: Projects
+tags:
+- Java
+- Network Programming
+- Project
+- Multiple Threads
+---
+
 # Java-ChatSystem
 > IDE Eclipse Version: Oxygen.1a Release (4.7.1a)  
 > java version "1.8.0_144"  
 > Java(TM) SE Runtime Environment (build 1.8.0_144-b01)  
 > Developer: Chunkai
+> [Github](https://github.com/chunkai-meng/Java-ChatSystem)  
+> Completed at Oct 2017
+
 
 ## USAGE
 - Clone the repository to you local disk
@@ -17,6 +31,7 @@ Bajie/B1234
 
 ## Functions
 ### Client:
+![image](Broadcast.png)
 - Send a basic text message to the server
 - Receive text from the server
 - Username/Password login  
@@ -29,6 +44,7 @@ When account successfully login the login area Test Field will be set to disable
   When sending a private message, the first msg being sent to server is of type: CHAT_MESSAGE. The second msg is the receiver name, the third msg is message itself.
 The corresponding ClientHandler Thread maintain a total Client List will forward it to the right person.
 - Block/ignore user  
+![image](C-blocked-by-B.png)
   - Design:  
   When chose a user and click “Block/Unblock” button, this user will be block in this client.Right after the click, the background color of Blocked-User cell is set to Color Gray.If user A is block by user B, A will not received any notice about this blocking, this is for protecting B’s privacy.
   - Implementation:  
